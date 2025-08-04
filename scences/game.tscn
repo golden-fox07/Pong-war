@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://clp0bat4wquvv"]
+
+[ext_resource type="Script" uid="uid://dvd8444ybftvb" path="res://scripts/gamee.gd" id="1_cho2i"]
+[ext_resource type="PackedScene" uid="uid://bw2r8e77bd40a" path="res://scences/ui.tscn" id="2_hnbpv"]
+[ext_resource type="PackedScene" uid="uid://bs0ji1ye5m4rm" path="res://scences/paddle.tscn" id="3_lvua1"]
+[ext_resource type="PackedScene" uid="uid://bdholkt7wnthh" path="res://scences/detector.tscn" id="4_a0bl5"]
+[ext_resource type="PackedScene" uid="uid://cn2f6bcndb3hn" path="res://scences/ball.tscn" id="5_nn1ya"]
+[ext_resource type="PackedScene" uid="uid://n1vbrdyi8ixf" path="res://scences/wall.tscn" id="6_ua0fu"]
+[ext_resource type="PackedScene" uid="uid://bpmcwwmlsxqee" path="res://scences/dashed_line.tscn" id="7_wctid"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_yc664"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_cho2i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("2_hnbpv")]
+
+[node name="Background" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(641.274, 359.75)
+scale = Vector2(-1284.36, 720.5)
+mesh = SubResource("QuadMesh_yc664")
+
+[node name="Paddle_One" parent="." instance=ExtResource("3_lvua1")]
+position = Vector2(20, 360)
+is_player_one = true
+
+[node name="Paddle_Two" parent="." instance=ExtResource("3_lvua1")]
+position = Vector2(1260, 360)
+
+[node name="Detector_Left" parent="." instance=ExtResource("4_a0bl5")]
+position = Vector2(0, 360)
+is_left = true
+
+[node name="Detector_Right" parent="." instance=ExtResource("4_a0bl5")]
+position = Vector2(1280, 360)
+
+[node name="Ball" parent="." instance=ExtResource("5_nn1ya")]
+position = Vector2(631, 382)
+
+[node name="Wall_Up" parent="." instance=ExtResource("6_ua0fu")]
+position = Vector2(640, 0)
+
+[node name="Wall_Down" parent="." instance=ExtResource("6_ua0fu")]
+position = Vector2(640, 720)
+
+[node name="Start_Delay" type="Timer" parent="."]
+one_shot = true
+
+[node name="Dashed_Line" parent="." instance=ExtResource("7_wctid")]

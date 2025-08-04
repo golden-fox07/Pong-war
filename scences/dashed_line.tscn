@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpmcwwmlsxqee"]
+
+[ext_resource type="Script" uid="uid://cppgagruq2d7c" path="res://scripts/dashed_line.gd" id="1_a7y1x"]
+
+[node name="Dashed_Line" type="Node2D"]
+script = ExtResource("1_a7y1x")
