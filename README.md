@@ -3,8 +3,7 @@ Welcome to my minimalist, no-assets-needed recreation of the classic Pong game b
 
 ## Overview
 
- <img width="80%" height="auto" alt="image" src="https://github.com/user-attachments/assets/296c2433-77f6-4e69-842c-e7f22db60c4a" />
-
+<img width="2879" height="1623" alt="image" src="https://github.com/user-attachments/assets/a11946aa-5bef-4785-a14e-df788e46f2a9" />
 
 ## Features
 
